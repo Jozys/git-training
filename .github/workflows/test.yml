@@ -1,0 +1,15 @@
+name: Test application
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  pr_created:
+    # This job only runs for pull request comments
+    name: PR opened
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Test project
+        run: npm run test
