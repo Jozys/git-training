@@ -3,6 +3,7 @@ on:
   pull_request:
     types: [opened]
 jobs:
+  runs-on: ubuntu-latest
   pr_created:
     # This job only runs for pull request comments
     name: PR opened
